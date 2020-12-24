@@ -1,0 +1,4 @@
+port_no: 8080
+proxy_software: haproxy
+proxy_service: haproxy
+by_default_port: 80

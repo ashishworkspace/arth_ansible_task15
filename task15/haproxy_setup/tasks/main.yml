@@ -1,0 +1,15 @@
+- name: "Installing Haproxy Software"
+  package: 
+   name: "{{ proxy_software }}"
+   state: present
+- name: "Copying Configuration file"
+  template:
+   src: templates/haproxy.cfg
+   dest: /etc/haproxy/haproxy.cfg
+  notify: On Change in Configuration file
+- name: "Starting the Service"
+  service:
+   name: "{{ proxy_service }}"
+   state: started
+  
+

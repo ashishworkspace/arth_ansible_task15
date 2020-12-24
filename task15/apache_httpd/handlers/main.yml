@@ -1,0 +1,4 @@
+- name: On Content Change
+  service:
+   name: "{{ web_service }}"
+   state: restarted

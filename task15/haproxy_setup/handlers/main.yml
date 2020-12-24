@@ -1,0 +1,5 @@
+- name: On Change in Configuration file
+  service: 
+   name: "{{ proxy_service }}"
+   state: restarted
+
